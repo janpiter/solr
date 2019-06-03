@@ -10,5 +10,10 @@ $ docker run -d -p 8983:8983 jpnkls/solr
 ## Add configuration parameters like this:
 
 ```
-$ docker run -d -p 8983:8983 jpnkls/solr -v /path/to/multicore/dir:/home/solr/example/multicore
+$ docker run \
+  --name solr-hs \
+  -d \
+  -p 8983:8983 \
+  -v /path/to/multicore/dir:/home/solr/example/multicore \
+  jpnkls/solr
 ```
